@@ -1,59 +1,40 @@
 ---
 title: "Worklog Tuần 2"
-date: 2024-01-01
+date: 2026-06-22
 weight: 1
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}}
+<!-- {{% notice warning %}}
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+{{% /notice %}} -->
 
 
 ### Mục tiêu tuần 2:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Lên ý tưởng dự án, chia công việc về project và tìm hiểu các nguồn tham khảo
+* Lựa chọn các dịch vụ AWS phù hợp với dự án
+* Hoàn thành bài lab 2, 6, 78
+* Tìm hiểu về dịch vụ lambda, s3 bucket, dynamoDB
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Lựa chọn đề tài cho dự án: <br>&emsp; Xây dựng serverless application với các dịch vụ AWS <br> - Họp và lựa chọn ý tưởng chủ đề cho dự án: <br>&emsp; Giao dịch ngân hàng                                                                                        | 22/06/2026   | 24/06/2026      |
+| 3   | - Thực hiện lab 2: <br>&emsp; + Tạo quyền IAM User <br>&emsp; + Thực hiện tạo/ sử dụng các policy cho các dịch vụ                                             | 23/06/2026   | 23/06/2026      | <https://000002.awsstudygroup.com/> |
+| 4   | - Thực hiện  Lab 6 RDS Database: <br>&emsp; + Dùng Linux qua EC2 để cài MySQL <br>&emsp; + Tạo Load Balancer & Target Groups      | 24/06/2026   | 24/06/2026      | <https://000006.awsstudygroup.com/> |
+| 5   | - Tìm hiểu về kiến trúc serverless(ưu, nhược) <br> - Tìm hiểu về các dịch vụ serverless: lambda, dynamoDB, DB RDS,... <br> - Vẽ thiết kế hệ thống dự án dựa trên các sơ đồ mẫu kiến trúc serverless                  | 25/06/2025   | 27/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Thực hiện  Lab 78 Lambda tương tác s3 và dynamoDB: <br>&emsp; + Dùng Lambda tạo hàm xử lý kích thước ảnh kết nối S3 <br>&emsp; + Tạo hàm ghi dữ liệu vào DynamoDB                                                                                     | 26/06/2026   | 26/06/2026      | <https://000078.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 2:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Xác định được đề tài cho dự án, chia công việc về project lên ý tưởng cho dự án.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Thiết kế hệ thống dự án dựa trên các sơ đồ mẫu kiến trúc serverless.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Hoàn thành lab 2, 78, chưa hoàn thành lab 6.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
+* Tìm hiểu về dịch vụ lambda, s3 bucket, dynamoDB và nắm được cách lambda tương tác với s3 bucket và dynamoDB.
 
