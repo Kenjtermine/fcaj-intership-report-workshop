@@ -59,7 +59,7 @@ Bạn không cần là chuyên gia, nhưng nên nắm các khái niệm sau đ�
 Clone (hoặc mở sẵn) repository dự án:
 
 ```bash
-git clone <URL-repo-naturEra-green-banking-web>
+git clone https://github.com/Kenjtermine/naturEra-green-banking-web.git
 cd naturEra-green-banking-web
 ```
 

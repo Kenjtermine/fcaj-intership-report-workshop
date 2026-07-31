@@ -5,6 +5,11 @@ weight : 3
 chapter : false
 pre : " <b> 5.3. </b> "
 ---
+If the previous step was not completed, please create a new repo and clone it to the workshop directory:
+```bash
+git clone https://github.com/Kenjtermine/naturEra-green-banking-web.git
+cd naturEra-green-banking-web
+```
 
 ## Backend Folder Structure
 

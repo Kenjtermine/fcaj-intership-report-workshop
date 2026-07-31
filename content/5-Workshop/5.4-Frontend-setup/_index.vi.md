@@ -44,7 +44,7 @@ Mở terminal tại thư mục làm việc của bạn và chạy các lệnh sa
 
 #### Bước 1: Clone repository của dự án
 ```bash
-git clone [https://github.com/Kenjtermine/naturEra-green-banking-web.git](https://github.com/Kenjtermine/naturEra-green-banking-web.git)
+git clone https://github.com/Kenjtermine/naturEra-green-banking-web.git
 cd naturEra-green-banking-web
 cd apps/web
 ```

@@ -59,7 +59,7 @@ You do not need to be an expert, but you should be comfortable with:
 Clone (or open) the project repository:
 
 ```bash
-git clone <URL-repo-naturEra-green-banking-web>
+git clone https://github.com/Kenjtermine/naturEra-green-banking-web.git
 cd naturEra-green-banking-web
 ```
 

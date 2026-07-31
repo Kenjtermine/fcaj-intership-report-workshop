@@ -44,7 +44,7 @@ Open your terminal at your working directory and run the following commands to d
 
 #### Step 1: Clone the project repository
 ```bash
-git clone [https://github.com/Kenjtermine/naturEra-green-banking-web.git](https://github.com/Kenjtermine/naturEra-green-banking-web.git)
+git clone https://github.com/Kenjtermine/naturEra-green-banking-web.git
 cd naturEra-green-banking-web
 cd apps/web
 ```

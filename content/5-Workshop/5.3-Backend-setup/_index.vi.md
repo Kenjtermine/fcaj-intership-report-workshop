@@ -7,7 +7,7 @@ pre : " <b> 5.3. </b> "
 ---
 Nếu bước trước bạn chưa clone dự án, hãy tạo một repo mới và clone vào thư mục thực hiện workshop:
 ```bash
-git clone [https://github.com/Kenjtermine/naturEra-green-banking-web.git](https://github.com/Kenjtermine/naturEra-green-banking-web.git)
+git clone https://github.com/Kenjtermine/naturEra-green-banking-web.git
 cd naturEra-green-banking-web
 ```
 ## Cấu trúc của thư mục backend
