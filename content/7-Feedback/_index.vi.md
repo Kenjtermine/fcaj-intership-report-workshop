@@ -5,40 +5,36 @@ weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
-{{% notice warning %}}
+<!-- {{% notice warning %}}
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+{{% /notice %}} -->
 
->Tại đây bạn có thể tự do đóng góp ý kiến cá nhân về những trải nghiệm khi tham gia chương trình First Cloud AI Journey, giúp team FCAJ cải thiện những vấn đề còn thiếu sót dựa trên các hạng mục sau:
+Trong thời gian tham gia chương trình FCAJ, tôi đã có nhiều trải nghiệm, kiến thức và cơ hội học hỏi ở một môi trường làm việc doanh nghiệp thực tế. Nội dung của chương trình đã giúp tôi tập trung tốt hơn trong một thời gian thực tập, và đã được áp dụng ở nhiều nền tảng khác nhau. Dưới đây là những gì tôi đã tìm hiểu và học từ chương trình FCAJ:
 
 ### Đánh giá chung
 
 **1. Môi trường làm việc**  
-Môi trường làm việc rất thân thiện và cởi mở. Các thành viên trong FCAJ luôn sẵn sàng hỗ trợ khi mình gặp khó khăn, kể cả ngoài giờ làm việc. Không gian làm việc gọn gàng, thoải mái, giúp mình tập trung tốt hơn. Tuy nhiên, mình nghĩ có thể bổ sung thêm một số buổi giao lưu hoặc team bonding để mọi người hiểu nhau hơn.
+Môi trường làm việc cởi mở, phù hợp cho các bạn mới bắt đầu về các dịch vụ cơ bản AWS. Các anh chị trong FCAJ luôn sẵn sàng hỗ trợ khi mình gặp khó khăn, kể cả ngoài giờ làm việc. Không gian làm việc gọn gàng, thoải mái, giúp tôi tập trung tốt hơn. Chương trình chủ yếu là tự học, tự tìm hiểu cùng với cộng đồng học tập trên nhiều nền tảng mạng xã hội giúp tôi đạt được những kĩ năng về tự làm việc.
 
 **2. Sự hỗ trợ của mentor / team admin**  
-Mentor hướng dẫn rất chi tiết, giải thích rõ ràng khi mình chưa hiểu và luôn khuyến khích mình đặt câu hỏi. Team admin hỗ trợ các thủ tục, tài liệu và tạo điều kiện để mình làm việc thuận lợi. Mình đánh giá cao việc mentor cho phép mình thử và tự xử lý vấn đề thay vì chỉ đưa đáp án.
+Team admin hỗ trợ các thủ tục, giải đáp các thắc mắc và khó khăn về các vấn đề giúp các bạn có thể tự xử lý và giải quyết các vấn đề đó. Các anh chị admin trong FCAJ luôn định hướng cho bạn bản chất của các vấn đề đó và các bạn có thể tự xử lý và giải quyết các vấn đề đó thay vì chỉ đưa đáp án.
 
 **3. Sự phù hợp giữa công việc và chuyên ngành học**  
-Công việc mình được giao phù hợp với kiến thức mình đã học ở trường, đồng thời mở rộng thêm những mảng mới mà mình chưa từng được tiếp cận. Nhờ vậy, mình vừa củng cố kiến thức nền tảng, vừa học thêm kỹ năng thực tế.
+Với chuyên ngành học là kĩ sư phần mềm, trước đây tôi chỉ có kiến thức về triển khai code và các kiến thức cơ bản, nhưng nhờ chương trình FCAJ đã học hỏi về AWS, tôi biết thêm kiến thức về các dịch vụ đám mây AWS, deploy ứng dụng, thiết kế kiến trúc hệ thống tốt hơn.
 
 **4. Cơ hội học hỏi & phát triển kỹ năng**  
-Trong quá trình thực tập, mình học được nhiều kỹ năng mới như sử dụng công cụ quản lý dự án, kỹ năng làm việc nhóm, và cả cách giao tiếp chuyên nghiệp trong môi trường công ty. Mentor cũng chia sẻ nhiều kinh nghiệm thực tế giúp mình định hướng tốt hơn cho sự nghiệp.
+Ngoài kiến thức AWS, tôi cải thiện thêm kỹ năng làm việc nhóm, ghi chép worklog, trình bày tiến độ và phân chia công việc. Trong dự án NatuEra - Green Banking, tôi đã có nhiều kinh nghiệm thực tế giúp tôi định hướng tốt hơn cho sự nghiệp.
 
 **5. Văn hóa & tinh thần đồng đội**  
-Văn hóa công ty rất tích cực: mọi người tôn trọng lẫn nhau, làm việc nghiêm túc nhưng vẫn vui vẻ. Khi có dự án gấp, mọi người cùng nhau cố gắng, hỗ trợ không phân biệt vị trí. Điều này giúp mình cảm thấy mình là một phần của tập thể, dù chỉ là thực tập sinh.
+Văn hóa công ty tạo cho mọi người một tinh thần đồng đội, sự tôn trọng đối với nhau, đề cao tinh thần sáng tạo, tự học hỏi và luôn luôn trở nên tốt hơn.
 
-**6. Chính sách / phúc lợi cho thực tập sinh**  
-Công ty có hỗ trợ phụ cấp thực tập và tạo điều kiện về thời gian linh hoạt khi cần thiết. Ngoài ra, việc được tham gia các buổi đào tạo nội bộ là một điểm cộng lớn.
+### Điều tôi hài lòng nhất trong thời gian thực tập
 
-
-### Một số câu hỏi khác
-- Điều bạn **hài lòng nhất** trong thời gian thực tập?  
-- Điều bạn nghĩ công ty **cần cải thiện** cho các thực tập sinh sau?  
-- Nếu giới thiệu cho bạn bè, bạn có **khuyên họ thực tập ở đây không**? Vì sao?  
-
+Điều tôi hài lòng nhất là FCAJ đã đem đến cho tôi một môi trường làm việc tuyệt vời, cơ hội học hỏi và gặp gỡ với những bạn đồng trang lứa ở những ngôi trường khác nhau. Mở mang được những kiến thức, kinh nghiệm và những kĩ năng làm việc môi trường thực tế mà không thể tìm được trong thời gian chỉ học ở trong trường.
+<!-- 
 
 ### Đề xuất & mong muốn
-- Bạn có đề xuất gì để cải thiện trải nghiệm trong kỳ thực tập?  
-- Bạn có muốn tiếp tục chương trình này trong tương lai?
-- Góp ý khác (tự do chia sẻ):
+*  -->
+
+### Tổng kết
+Tôi nghĩ rằng FCAJ là một chương trình rất phù hợp cho tất cả những ai có mong muốn tìm hiểu về AWS nói riêng, dịch vụ đám mây nói chung. Môi trường làm việc thực tế của FCAJ đã giúp tôi tập trung tốt hơn trong một thời gian thực tập, và đã được áp dụng ở nhiều nền tảng khác nhau.

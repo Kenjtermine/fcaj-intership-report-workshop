@@ -5,55 +5,35 @@ weight: 1
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
+<!-- {{% notice warning %}}
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+{{% /notice %}} -->
 
 
 ### Mục tiêu tuần 3:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Họp lần 2 để lên ý tưởng chốt tổng hợp của dự án.
+* Tìm hiểu, xem các bài viết về ý tưởng mới ngân hàng xanh của dự án vừa chốt.
+* Sửa lại bản thiết kế của dự án theo ý tưởng mới ngân hàng.
+* Tìm hiểu thêm các dịch vụ khác phục vụ cho Serverless application.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Lên lịch meeting với các thành viên để cùng nhau suy nghĩ ý tưởng mới cho dự án ngân hàng: <br>&emsp; + Nhóm thành viên quyết định mô hình Green Banking cho dự án                                                                                           | 29/06/2026   | 29/06/2026      |
+| 3   | - Tìm các bài viết, nguồn tài liệu liên quan tới mô hình Green Banking                                             | 30/06/2026   | 1/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Thiết kế hệ thống dự án dựa trên các sơ đồ mẫu kiến trúc serverless: <br>&emsp; + Tạo Cloudformation template cho các dịch vụ AWS <br>&emsp; + Tạo Lambda function  <br>&emsp; + ...                                                                                           | 2/07/2026    | 3/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Thực hiện lab 80: <br>&emsp; + Triển khai frontend có sẵn <br>&emsp; + Tạo Lambda function để xử lý kích thước ảnh kết nối S3 <br>&emsp; + Tạo Lambda function để ghi dữ liệu vào DynamoDB <br>&emsp; + ... | 3/07/2026    | 3/07/2026      | <https://000080.awsstudygroup.com/> |
+| 7   | - Tham gia event online - event AWS Enterprise Cloud Architectures & Industry Application                                                                                                                                                                                                                                                                                                                                                                              | 4/07/2026    | 4/07/2026      |
 
 
 ### Kết quả đạt được tuần 3:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Ý tưởng mới của nhóm chốt là mô hình Green Banking trong dự án ngân hàng
+* Tìm hiểu về bài viết và các tài liệu để hiểu được mô hình hoạt động thế nào, ý nghĩa và sứ mệnh của nó. Tiếp tục tìm hiểu thêm để rõ hơn trong tuần tới
+* Vẽ lại kiên trúc: Thiết kế các core lambda function kết nối bằng API Gateway, core lambda là Transaction Lambda - thực hiện giao dịch
+* Thực hiện lab để hiểu rõ về SAM - Serverless Application Model, giúp cho lập trình viên nhanh chóng xây dựng và triển khai các dịch vụ AWS
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
 
 

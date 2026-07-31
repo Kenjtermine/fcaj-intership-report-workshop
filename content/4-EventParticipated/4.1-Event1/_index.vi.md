@@ -1,125 +1,27 @@
 ---
-title: "Event 1"
+title: "Event 1: AWS Enterprise Cloud Architectures & Industry Application"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+### Mục tiêu sự kiện (Event Objectives)
+* Khám phá các phương pháp và kiến trúc Cloud cấp doanh nghiệp (Enterprise-scale) trên nền tảng AWS.
+* Lắng nghe chia sẻ thực chiến từ các đối tác hàng đầu của AWS tại Việt Nam và khu vực: Cloud Kinetics và Renova Cloud.
+* Phân tích các ca ứng dụng thực tế (Industry Applications) trong quá trình chuyển đổi số, tối ưu hóa chi phí (FinOps) và hiện đại hóa hệ thống.
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+### Các chuyên đề và giải pháp tiêu biểu (Featured Topics & Solutions)
+* **Cloud Kinetics - Tối ưu hóa Hành trình Lên mây (Cloud Migration & FinOps):** Trình bày về khung kiến trúc chuyển đổi quy mô lớn. Nhấn mạnh vào cách áp dụng FinOps để quản trị chi phí AWS hiệu quả, kiểm soát dòng tiền Cloud - cực kỳ phù hợp khi xây dựng các hệ thống tài chính cần Audit chặt chẽ.
+* **Renova Cloud - Hiện đại hóa Ứng dụng & Dữ liệu (App Modernization & Data):** Chia sẻ cách tái cấu trúc ứng dụng nguyên khối (Monolith) sang Vi dịch vụ (Microservices) sử dụng Serverless và EKS. Ứng dụng AI/ML và Data Lake vào phân tích dữ liệu ngành bán lẻ và sản xuất.
+* **Industry Applications (Ứng dụng đặc thù ngành):** Phân tích sâu về các giải pháp bảo mật và tuân thủ (Security & Compliance) dành riêng cho khối FSI (Financial Services Industry). Cách thiết lập Landing Zone chuẩn bảo mật để ngăn chặn rò rỉ dữ liệu.
 
-### Mục Đích Của Sự Kiện
+### Trải nghiệm sự kiện (Event Experience)
+Việc phân tích góc nhìn từ các chuyên gia Kiến trúc Giải pháp (Solutions Architects) của mạng lưới đối tác AWS (APN) mang lại một lăng kính bao quát hơn rất nhiều so với việc chỉ tự build Lab cá nhân.
+* **Tư duy Enterprise (Quy mô doanh nghiệp):** Nhận ra rằng ở hệ thống lớn, kiến trúc không chỉ là code chạy được (Functional), mà phải giải quyết bài toán về bảo mật nhiều lớp (Defense in Depth), tính khả dụng cao (Multi-AZ) và khắc phục thảm họa (Disaster Recovery).
+* **Kết nối thực tiễn dự án FCAJ:** Những kiến thức về bảo mật ranh giới và cách các doanh nghiệp cô lập dữ liệu hoàn toàn khớp với cách chúng ta đang thiết kế luồng Identity (Cognito) và tách bạch quyền hạn IAM (Security Isolation) cho các Lambda function (như TransactionEngine vs. ReportGenerator) trong dự án Digital Bank.
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
-
-### Danh Sách Diễn Giả
-
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
-
-### Nội Dung Nổi Bật
-
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
-
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
-
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
-
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
-
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
-
-#### Domain-Driven Design (DDD)
-
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
-
-#### Event-Driven Architecture
-
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
-
-#### Compute Evolution
-
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
-
-#### Amazon Q Developer
-
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
-
-### Những Gì Học Được
-
-#### Tư Duy Thiết Kế
-
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
-
-#### Kiến Trúc Kỹ Thuật
-
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
-
-#### Chiến Lược Hiện Đại Hóa
-
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
-
-### Ứng Dụng Vào Công Việc
-
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
-
-### Trải nghiệm trong event
-
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
-
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
-
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
-
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
-
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
-
-#### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
-
-#### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+### Tổng kết (Lessons Learned)
+* **Kiến trúc Cloud bám sát bài toán Kinh doanh:** Mọi quyết định lựa chọn công nghệ (Ví dụ: dùng Aurora Serverless hay DynamoDB, dùng EC2 hay Fargate) đều phải phục vụ trực tiếp cho bài toán kinh doanh với SLA (Cam kết chất lượng) và chi phí tối ưu nhất.
+* **FinOps là liên tục:** Không phải đưa hệ thống lên Cloud là xong. Việc giám sát, gắn Tag (như sử dụng AWS Resource Groups thay thế myApplications) để truy vết chi phí là kỹ năng sống còn của một Cloud Architect.
+* **Tận dụng Hệ sinh thái:** Đối với các dự án lớn, việc đứng trên vai người khổng lồ (sử dụng Managed Services của AWS và Best Practices từ Partners) giúp rút ngắn thời gian ra mắt thị trường (Time-to-market) và giảm rủi ro vận hành (Operational Overhead).

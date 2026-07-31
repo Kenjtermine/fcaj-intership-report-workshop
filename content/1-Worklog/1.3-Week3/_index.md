@@ -5,53 +5,31 @@ weight: 1
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}} 
+<!-- {{% notice warning %}} 
 ⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+{{% /notice %}} -->
 
 
 ### Week 3 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Meet with FCAJ members to brainstorm the new project scope.
+* Research and understand model of Green Banking in the new project.
+* Review and revise the design of the project based on the new model.
+* Learn about the core lambda functions and how they interact with each other. Practice with the SAM - Serverless Application Model to build and deploy AWS services.
 
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Meet with FCAJ members to brainstorm the new project scope: <br>&emsp; + Decide on the scope of the project <br>&emsp; + Discuss the scope with the FCAJ members                                                                                              | 29/06/2026 | 29/06/2026      |
+| 3   | - Research and understand model of Green Banking in the new project: <br>&emsp; + Read the FCAJ members' proposals                                                                                                                                                                                                                                                                     | 30/06/2026 | 01/07/2026      | |
+| 5   | - Review and revise the design of the project based on the new model: <br>&emsp; + Create a Cloudformation template for the AWS services <br>&emsp; + Create Lambda functions <br>&emsp; + ...                                                                                               | 02/07/2026 | 03/07/2026      |  |
+| 6   | - Practice with lab 80: <br>&emsp; + Deploy the frontend <br>&emsp; + Create Lambda functions to process image size for S3 uploads <br>&emsp; + Create Lambda functions to store data in DynamoDB <br>&emsp; + ... | 03/07/2026 | 03/07/2026      | <https://000080.awsstudygroup.com/> |
+| 7   | - Participate in the AWS Community Day event online: AWS Enterprise Cloud Architectures & Industry Application | 04/07/2026 | 04/07/2026      |  |
 
 
 ### Week 3 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* New project scope: Green Banking model in the new project
+* Research and understand model of Green Banking in the new project. Knowledge of the FCAJ members' proposals. Continue to research and understand the model next week.
+* Practice with lab 80: Deploy the frontend, create Lambda functions to process image size for S3 uploads, create Lambda functions to store data in DynamoDB, etc.
+* Learn about the core lambda functions and how they interact with each other. Practice with the SAM - Serverless Application Model to build and deploy AWS services.

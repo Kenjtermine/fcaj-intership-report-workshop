@@ -1,6 +1,6 @@
 ---
 title: "Internship Report"
-date: 2026-06-16
+date: 2024-01-01
 weight: 1
 chapter: false
 ---
@@ -29,7 +29,7 @@ chapter: false
 
 &emsp; **Internship Position:** Workforce Bootcamp - First Cloud AI Journey
 
-&emsp; **Internship Duration:** From 16/06/2025 to 28/08/2026
+&emsp; **Internship Duration:** From 16/06/2025 to 14/08/2026
 
 ![Your profile picture](/images/my_avatar.jpg)
 

@@ -12,47 +12,23 @@ pre: " <b> 1.6. </b> "
 
 ### Mục tiêu tuần 6:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu về các logic nghiệp vụ trong ngân hàng, quy tắc ACID
+* Triển khai lambda Transaction Interceptor cùng các dịch vụ
+* Viết các ADR cho triển khai các lambda
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| :---: | :--- | :---: | :---: | :--- |
+| 2 | Tìm hiểu về các logic nghiệp vụ trong ngân hàng, quy tắc ACID | 20/07/2026 | 20/07/2026 |  |
+| 3 | Triển khai lambda Transaction Interceptor cùng các dịch vụ | 21/07/2026 | 23/07/2026 |  |
+| 4 | Viết các ADR cho triển khai các lambda | 22/07/2026 | 22/07/2026 |  |
+| 5 | Tiến hành fix lại lambda Transaction Interceptor và sửa lại logic thực hiện giao dịch trên chỉ máy POS | 23/07/2026 | 24/07/2026 |  |
+| 7 | Tham gia và học hỏi event FCAJ x Agentic AI Build Week: Show Up. Build. Pitch. WIN! | 25/07/2026 | 25/07/2026 | https://www.youtube.com/live/hz32VBrvW7M?si=04sFVIftn__ZF-Cu |
 
 ### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Tìm hiểu và biết được sơ lược cách triển khai logic giao dịch trong ngân hàng, trade-off và nguyên tắc ACID.
+* Triển khai lambda Transaction Interceptor và sửa lại logic thực hiện giao dịch trên chỉ máy POS. Tiếp tực sửa lại logic cho hoàn thiện vào tuần tới.
+* Tham dự sự kiện và học hỏi được các kinh nghiệm, trải nghiệm của các team khi đi thi các cuộc thi hackathon.
 
 

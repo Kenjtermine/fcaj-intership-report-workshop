@@ -1,3 +1,4 @@
+
 ---
 title: "Worklog Tuần 4"
 date: 2024-01-01
@@ -5,55 +6,26 @@ weight: 1
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 4:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Khởi tạo dự án thực tế bằng AWS SAM dựa trên kiến trúc đã vẽ ở Tuần 3.
+* Cấu hình cơ sở dữ liệu DynamoDB (Single-Table Design) và bơm dữ liệu mồi (Seed Data).
+* Tích hợp AWS Cognito để quản lý xác thực người dùng (Client/Staff).
+* Phát triển `Transaction Lambda` cốt lõi (tích hợp logic tính toán hệ số CO2).
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| 2   | - Khởi tạo Infrastructure: Dùng AWS CLI/SAM CLI để tạo bộ khung dự án.<br>&emsp; + Thiết lập `template.yaml` cho bảng `GreenBankingTable` (DynamoDB)                                        | 06/07/2026   | 06/07/2026      | <https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/> |
+| 3   | - Xác thực & Bảo mật: Cấu hình AWS Cognito User Pool cho khách hàng và nhân viên. <br>&emsp; + Cập nhật `template.yaml` để thêm Cognito                                                     | 07/07/2026   | 07/07/2026      |  |
+| 5   | - Phát triển Core Logic: Bắt tay vào viết code cho `Transaction Lambda`. <br>&emsp; + Tích hợp công thức tính toán hệ số CO2 dựa trên số tiền/loại giao dịch.                               | 09/07/2026   | 10/07/2026      |                                           |
+| 6   | - Dữ liệu giả lập (Mock Data): Viết script bơm dữ liệu Seed vào DynamoDB. <br>&emsp; + Xử lý lỗi 500 do thiếu dữ liệu khi gọi API.                                                          | 10/07/2026   | 10/07/2026      |                                           |
+| 7   | - Testing & Review: Sử dụng `sam local invoke` để chạy thử và debug Lambda.<br>&emsp; + Họp nhóm review tiến độ code tuần 4.                                                                | 11/07/2026   | 11/07/2026      |                                           |
 
 ### Kết quả đạt được tuần 4:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Bộ khung dự án Infrastructure as Code (IaC) bằng SAM đã sẵn sàng hoạt động.
+* Cơ sở dữ liệu DynamoDB đã có dữ liệu mẫu để team Frontend có thể bắt đầu gọi API.
+* Core function (`Transaction Lambda`) đã có thể chạy dưới local và tính toán được điểm CO2.
+* Hệ thống phân quyền cơ bản với Cognito đã được thiết lập xong.
