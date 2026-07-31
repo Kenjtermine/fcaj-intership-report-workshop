@@ -30,7 +30,7 @@ Trong workshop, bạn sẽ:
 + Giả lập giao dịch quẹt thẻ POS (`POST /v1/transactions` với `x-api-key`)
 + Kiểm tra cộng dồn CO₂, khóa thẻ real-time và dữ liệu trên DynamoDB / Dashboard
 
-![NaturEra Architecture](/images/2-Proposal/naturera_architecture.jpg)
+![NaturEra Architecture](/static/images/2-Proposal/naturera_architecture.jpg)
 
 #### Tóm tắt kiến trúc
 

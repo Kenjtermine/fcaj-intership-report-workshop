@@ -43,5 +43,5 @@ pre: " <b> 4.2. </b> "
 * Việc áp dụng Infrastructure as Code (IaC) là xu hướng tất yếu mà bất kỳ kỹ sư hệ thống nào cũng phải nắm vững để không bị tụt hậu.
 
 ### Hình ảnh tham gia
-![Hình ảnh tham gia 1](images/4-Event/event2-1.jpg)
-![Hình ảnh tham gia 2](images/4-Event/event2-2.jpg)
+![Hình ảnh tham gia 1](/static/images/4-Event/event2-1.jpg)
+![Hình ảnh tham gia 2](/static/images/4-Event/event2-2.jpg)
