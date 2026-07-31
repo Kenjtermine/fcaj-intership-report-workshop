@@ -30,7 +30,7 @@ In this workshop you will:
 + Simulate POS card swipes (`POST /v1/transactions` with `x-api-key`)
 + Verify CO₂ accumulation, real-time card lock, and data in DynamoDB / Dashboard
 
-![NaturEra Architecture](/static/images/2-Proposal/naturera_architecture.jpg)
+![NaturEra Architecture](/fcaj-intership-report-workshop/images/2-Proposal/naturera_architecture.jpg)
 
 #### Architecture summary
 

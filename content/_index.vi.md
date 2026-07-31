@@ -25,7 +25,7 @@ chapter: false
 
 &emsp; **Thời gian thực tập:** Từ ngày 16/06/2025 đến ngày 14/08/2025
 
-![Ảnh đại diện của bạn](static/images/my_avatar.jpg)
+![Ảnh đại diện của bạn](/fcaj-intership-report-workshop/images/my_avatar.jpg)
 
 
 

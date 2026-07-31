@@ -31,7 +31,7 @@ chapter: false
 
 &emsp; **Internship Duration:** From 16/06/2025 to 14/08/2026
 
-![Your profile picture](/static/images/my_avatar.jpg)
+![Your profile picture](/fcaj-intership-report-workshop/images/my_avatar.jpg)
 
 ### Report Content
 
