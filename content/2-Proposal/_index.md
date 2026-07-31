@@ -33,7 +33,7 @@ The platform adopts a fully AWS-native Serverless architecture:
 * **AWS API Gateway**: Handles incoming requests from the frontend and routes them to Lambda functions.
 * **AWS DynamoDB**: Stores all data for the model.
 
-![NaturEra Architecture](/images/2-Proposal/naturera_architecture.jpg)
+![NaturEra Architecture](images/2-Proposal/naturera_architecture.jpg)
 
 ### 4. Technical Implementation
 *Implementation Stages*
