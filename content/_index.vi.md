@@ -28,7 +28,6 @@ chapter: false
 ![Ảnh đại diện của bạn](/fcaj-intership-report-workshop/images/my_avatar.jpg)
 
 
-
 ### Nội dung báo cáo
 
 1.  [Worklog](1-Worklog/)
