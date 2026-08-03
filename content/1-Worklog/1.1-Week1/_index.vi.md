@@ -4,6 +4,11 @@ date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
+reportTableColumns:
+  - Thứ
+  - Công việc
+  - Ngày hoàn thành
+reportType: worklog
 ---
 <!-- {{% notice warning %}}
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.

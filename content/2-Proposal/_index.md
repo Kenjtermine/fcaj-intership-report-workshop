@@ -4,6 +4,7 @@ date: 2024-01-01
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
+includeInReport: false
 ---
 # NaturEra Platform - Green Banking Model
 ## Unified AWS Serverless Solution for Banking Transaction Processing with CO2 Footprint Calculation

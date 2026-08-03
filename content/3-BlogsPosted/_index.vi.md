@@ -4,6 +4,7 @@ date: 2024-01-01
 weight: 3
 chapter: false
 pre: " <b> 3. </b> "
+includeInReport: false
 ---
 ## Các blogs đã được đăng bởi nhóm
 <!-- {{% notice warning %}}  
