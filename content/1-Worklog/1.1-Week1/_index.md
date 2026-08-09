@@ -5,17 +5,17 @@ weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 includeInReport: true
-reportTableColumns:
-  - Day
-  - Task
-  - Start Date
-  - Completion Date
-  - Reference Material
-reportHeadings:
-  - Week 1 Objectives
-  - Tasks to be carried out this week
-  - Week 1 Achievements
-reportType: worklog
+# reportTableColumns:
+#   - Day
+#   - Task
+#   - Start Date
+#   - Completion Date
+#   - Reference Material
+# reportHeadings:
+#   - Week 1 Objectives
+#   - Tasks to be carried out this week
+#   - Week 1 Achievements
+# reportType: worklog
 ---
 <!-- {{% notice warning %}} 
 ⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
