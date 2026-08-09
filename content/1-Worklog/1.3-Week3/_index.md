@@ -18,8 +18,8 @@ pre: " <b> 1.3. </b> "
 * Learn about the core lambda functions and how they interact with each other. Practice with the SAM - Serverless Application Model to build and deploy AWS services.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
+| Day | Task | Start Date | End Date | Reference Material |
+| :---: | :--- | :---: | :---: | :--- |
 | 2   | - Meet with FCAJ members to brainstorm the new project scope: <br>&emsp; + Decide on the scope of the project <br>&emsp; + Discuss the scope with the FCAJ members                                                                                              | 29/06/2026 | 29/06/2026      |
 | 3   | - Research and understand model of Green Banking in the new project: <br>&emsp; + Read the FCAJ members' proposals                                                                                                                                                                                                                                                                     | 30/06/2026 | 01/07/2026      | |
 | 5   | - Review and revise the design of the project based on the new model: <br>&emsp; + Create a Cloudformation template for the AWS services <br>&emsp; + Create Lambda functions <br>&emsp; + ...                                                                                               | 02/07/2026 | 03/07/2026      |  |

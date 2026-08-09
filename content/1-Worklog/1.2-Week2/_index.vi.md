@@ -4,6 +4,13 @@ date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.2. </b> "
+reportTableColumns:
+  - Thứ
+  - Công việc
+  - Ngày bắt đầu
+  - Ngày hoàn thành
+  - Nguồn tài liệu
+reportType: worklog
 ---
 <!-- {{% notice warning %}}
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
@@ -18,8 +25,8 @@ pre: " <b> 1.2. </b> "
 * Tìm hiểu về dịch vụ lambda, s3 bucket, dynamoDB
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| :---: | :--- | :---: | :---: | :--- |
 | 2   | - Lựa chọn đề tài cho dự án: <br>&emsp; Xây dựng serverless application với các dịch vụ AWS <br> - Họp và lựa chọn ý tưởng chủ đề cho dự án: <br>&emsp; Giao dịch ngân hàng                                                                                        | 22/06/2026   | 24/06/2026      |
 | 3   | - Thực hiện lab 2: <br>&emsp; + Tạo quyền IAM User <br>&emsp; + Thực hiện tạo/ sử dụng các policy cho các dịch vụ                                             | 23/06/2026   | 23/06/2026      | <https://000002.awsstudygroup.com/> |
 | 4   | - Thực hiện  Lab 6 RDS Database: <br>&emsp; + Dùng Linux qua EC2 để cài MySQL <br>&emsp; + Tạo Load Balancer & Target Groups      | 24/06/2026   | 24/06/2026      | <https://000006.awsstudygroup.com/> |

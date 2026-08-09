@@ -7,7 +7,9 @@ pre: " <b> 1.1. </b> "
 reportTableColumns:
   - Thứ
   - Công việc
+  - Ngày bắt đầu
   - Ngày hoàn thành
+  - Nguồn tài liệu
 reportType: worklog
 ---
 <!-- {{% notice warning %}}
@@ -21,8 +23,8 @@ reportType: worklog
 * Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| :---: | :--- | :---: | :---: | :--- |
 | 2   | - Làm quen với các thành viên FCAJ, tham gia các cộng đồng, mạng xã hội học tập của FCAJ <br> - Tìm kiếm thành viên và lập nhóm làm dự án thực tập                                                                                        | 15/06/2026   | 16/06/2026      |
 | 4   | - Tìm hiểu AWS và các loại dịch vụ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập      <br>                                            | 17/06/2026   | 17/06/2026      | <https://cloudjourney.awsstudygroup.com/>,<br><https://hcm-rules.awsfcaj.com/1-regulations/> |
 | 5   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình | 18/06/2026   | 18/06/2026      | <https://000001.awsstudygroup.com/> |

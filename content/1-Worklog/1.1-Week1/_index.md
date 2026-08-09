@@ -8,7 +8,9 @@ includeInReport: true
 reportTableColumns:
   - Day
   - Task
+  - Start Date
   - Completion Date
+  - Reference Material
 reportHeadings:
   - Week 1 Objectives
   - Tasks to be carried out this week
@@ -26,8 +28,8 @@ reportType: worklog
 * Understand basic AWS services, how to use the console & CLI.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
+| Day | Task | Start Date | End Date | Reference Material |
+| :---: | :--- | :---: | :---: | :--- |
 | 2 | - Get acquainted with FCAJ members, join FCAJ's learning communities and social networks <br> - Find members and form an internship project group                                                                                                                   | 15/06/2026 | 16/06/2026      |                                                                                                      |
 | 4 | - Learn about AWS and its types of services <br> - Read and take note of the internship unit's rules and regulations                                                                                                                                                | 17/06/2026 | 17/06/2026      | <https://cloudjourney.awsstudygroup.com/>, <br> <https://hcm-rules.awsfcaj.com/1-regulations/>       |
 | 5 | - Create an AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI                                                                                            | 18/06/2026 | 18/06/2026      | <https://000001.awsstudygroup.com/>                                                                  |

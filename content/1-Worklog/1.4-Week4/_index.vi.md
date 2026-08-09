@@ -1,10 +1,16 @@
-
 ---
 title: "Worklog Tuần 4"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.4. </b> "
+reportTableColumns:
+  - Thứ
+  - Công việc
+  - Ngày bắt đầu
+  - Ngày hoàn thành
+  - Nguồn tài liệu
+reportType: worklog
 ---
 
 ### Mục tiêu tuần 4:
@@ -15,8 +21,8 @@ pre: " <b> 1.4. </b> "
 * Phát triển `Transaction Lambda` cốt lõi (tích hợp logic tính toán hệ số CO2).
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| :---: | :--- | :---: | :---: | :--- |
 | 2   | - Khởi tạo Infrastructure: Dùng AWS CLI/SAM CLI để tạo bộ khung dự án.<br>&emsp; + Thiết lập `template.yaml` cho bảng `GreenBankingTable` (DynamoDB)                                        | 06/07/2026   | 06/07/2026      | <https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/> |
 | 3   | - Xác thực & Bảo mật: Cấu hình AWS Cognito User Pool cho khách hàng và nhân viên. <br>&emsp; + Cập nhật `template.yaml` để thêm Cognito                                                     | 07/07/2026   | 07/07/2026      |  |
 | 5   | - Phát triển Core Logic: Bắt tay vào viết code cho `Transaction Lambda`. <br>&emsp; + Tích hợp công thức tính toán hệ số CO2 dựa trên số tiền/loại giao dịch.                               | 09/07/2026   | 10/07/2026      |                                           |

@@ -4,6 +4,13 @@ date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.3. </b> "
+reportTableColumns:
+  - Thứ
+  - Công việc
+  - Ngày bắt đầu
+  - Ngày hoàn thành
+  - Nguồn tài liệu
+reportType: worklog
 ---
 <!-- {{% notice warning %}}
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
@@ -18,8 +25,8 @@ pre: " <b> 1.3. </b> "
 * Tìm hiểu thêm các dịch vụ khác phục vụ cho Serverless application.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| :---: | :--- | :---: | :---: | :--- |
 | 2   | - Lên lịch meeting với các thành viên để cùng nhau suy nghĩ ý tưởng mới cho dự án ngân hàng: <br>&emsp; + Nhóm thành viên quyết định mô hình Green Banking cho dự án                                                                                           | 29/06/2026   | 29/06/2026      |
 | 3   | - Tìm các bài viết, nguồn tài liệu liên quan tới mô hình Green Banking                                             | 30/06/2026   | 1/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
 | 5   | - Thiết kế hệ thống dự án dựa trên các sơ đồ mẫu kiến trúc serverless: <br>&emsp; + Tạo Cloudformation template cho các dịch vụ AWS <br>&emsp; + Tạo Lambda function  <br>&emsp; + ...                                                                                           | 2/07/2026    | 3/07/2026      | <https://cloudjourney.awsstudygroup.com/> |

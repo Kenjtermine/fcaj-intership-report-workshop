@@ -18,8 +18,8 @@ pre: " <b> 1.4. </b> "
 * Develop `Transaction Lambda` core logic (transaction calculation logic).
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
+| Day | Task | Start Date | End Date | References Material |
+| :---: | :--- | :---: | :---: | :--- |
 | 2   | - Create Infrastructure: Use AWS CLI/SAM CLI to create a project-based template.<br>&emsp; + Set up `template.yaml` for the GreenBankingTable (DynamoDB)                                        | 06/07/2026   | 06/07/2026      | <https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/> |
 | 3   | - Authenticate & Authorize: Set up AWS Cognito User Pool for the staff and the client. <br>&emsp; + Update `template.yaml` to add Cognito                                                     | 07/07/2026   | 07/07/2026      | |
 | 5   | - Core Logic: Write code for `Transaction Lambda`.<br>&emsp; + Interact with the CO2 calculation function in the `Transaction Lambda` using the Lambda Console.                               | 09/07/2026   | 10/07/2026      |                                           |
