@@ -77,6 +77,7 @@ jobs:
       - name: Compile Vietnamese PDF
         working-directory: report
         run: |
+          latexmk -C
           latexmk -pdf -interaction=nonstopmode main.tex
           latexmk -pdf -interaction=nonstopmode main.tex
           latexmk -pdf -interaction=nonstopmode main.tex
@@ -85,6 +86,7 @@ jobs:
       - name: Compile English PDF
         working-directory: report
         run: |
+          latexmk -C
           latexmk -pdf -interaction=nonstopmode main_en.tex
           latexmk -pdf -interaction=nonstopmode main_en.tex
           latexmk -pdf -interaction=nonstopmode main_en.tex
