@@ -11,7 +11,7 @@ pre: " <b> 6. </b> "
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
 {{% /notice %}} -->
 
-Trong suốt thời gian thực tập tại AWS/First Cloud Journey từ 17/04/2026 đến 12/07/2026, tôi đã có cơ hội học hỏi, rèn luyện và áp dụng kiến thức đã được trang bị tại trường vào môi trường làm việc thực tế.
+Trong suốt thời gian thực tập tại AWS/First Cloud Journey từ 16/06/2026 đến 14/08/2026, tôi đã có cơ hội học hỏi, rèn luyện và áp dụng kiến thức đã được trang bị tại trường vào môi trường làm việc thực tế.
 Tôi đã tham gia vào việc học tập dịch vụ của AWS, cũng như áp dụng các kiến thức đã được học vào dự án nhóm với chủ đề Green Banking, qua đó cải thiện kỹ năng làm việc nhóm và đặc biệt đã đạt được các kĩ năng mong muốn như nâng cao kiến trúc backend chuẩn enterprise, tối ưu giải pháp cho dự án, có thêm kiến thức về DevOps, điện toán đám mây và áp dụng các dịch vụ AWS hỗ trợ công việc lập trình. Dưới đây là những tiêu chí tự đánh giá bản thân qua thời gian làm việc thực tế tại doanh nghiệp:
 
 
