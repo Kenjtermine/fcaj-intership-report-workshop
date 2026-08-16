@@ -83,14 +83,14 @@ jobs:
           latexmk -pdf -interaction=nonstopmode main.tex
           cp main.pdf ../report_vn.pdf
 
-      - name: Compile English PDF
-        working-directory: report
-        run: |
-          latexmk -C
-          latexmk -pdf -interaction=nonstopmode main_en.tex
-          latexmk -pdf -interaction=nonstopmode main_en.tex
-          latexmk -pdf -interaction=nonstopmode main_en.tex
-          cp main_en.pdf ../report_en.pdf
+      # - name: Compile English PDF
+      #   working-directory: report
+      #   run: |
+      #     latexmk -C
+      #     latexmk -pdf -interaction=nonstopmode main_en.tex
+      #     latexmk -pdf -interaction=nonstopmode main_en.tex
+      #     latexmk -pdf -interaction=nonstopmode main_en.tex
+      #     cp main_en.pdf ../report_en.pdf
       
       - name: Package LaTeX source
         run: |
