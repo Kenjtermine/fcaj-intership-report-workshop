@@ -659,6 +659,23 @@ def preprocess_markdown(content, meta=None):
     content = content.replace("\u26a0", "!")
     content = content.replace("\u2192", r"$\rightarrow$")
 
+    # Box-drawing characters (used in ASCII/Unicode directory-tree diagrams
+    # inside fenced code blocks, e.g. "├── models/") aren't available in the
+    # T5/vntex font encoding under pdflatex and raise "Unicode character ...
+    # not set up for use with LaTeX", which then cascades into broken
+    # environments. Swap them for plain ASCII equivalents that render
+    # identically in a monospace verbatim block.
+    content = content.replace("\u2502", "|")    # │
+    content = content.replace("\u251c", "|-")   # ├
+    content = content.replace("\u2500", "-")    # ─ (repeats fine char-by-char)
+    content = content.replace("\u2514", "`-")   # └
+    content = content.replace("\u250c", ".-")   # ┌
+    content = content.replace("\u2510", "-.")   # ┐
+    content = content.replace("\u2518", "-'")   # ┘
+    content = content.replace("\u252c", "-+-")  # ┬
+    content = content.replace("\u2534", "-+-")  # ┴
+    content = content.replace("\u253c", "-+-")  # ┼
+
     return content
 # ---------------------------------------------------------------------------
 # Pandoc LaTeX conversion
@@ -763,6 +780,7 @@ def convert_to_latex(md_text, source_path=None):
                     "-f", "markdown+raw_tex+fenced_divs+bracketed_spans",
                     "-t", "latex",
                     "--top-level-division=section",
+                    "--no-highlight",
                     "--lua-filter", LUA_FILTER,
                     "-o", tmp_out,
                 ],
