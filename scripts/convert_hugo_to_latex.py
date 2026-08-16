@@ -85,16 +85,63 @@ def tex_safe(name):
     return re.sub(r"[^a-zA-Z0-9]", "_", name).strip("_")
 
 
+def replace_unicode_symbols(text):
+    """Swap Unicode symbols that pdflatex/T5-vntex can't render for plain
+    ASCII or LaTeX-safe equivalents. Shared by:
+      - preprocess_markdown() (raw markdown, before Pandoc)
+      - sanitize_latex_text() (section/subsection titles)
+      - latex_escape_cell()   (worklog table cell text)
+    Must run *after* any generic backslash/brace escaping in the caller,
+    since it inserts literal LaTeX (e.g. "$_2$") that should not itself
+    be escaped.
+    """
+    text = text.replace("\u2705", r"\checkmark")
+    text = text.replace("\u2610", r"$\square$")
+    text = re.sub(r"⚠\ufe0f?", "!", text)
+    text = text.replace("\u26a0", "!")
+    text = text.replace("\u2192", r"$\rightarrow$")
+
+    # Box-drawing characters (used in ASCII/Unicode directory-tree diagrams
+    # inside fenced code blocks, e.g. "├── models/") aren't available in the
+    # T5/vntex font encoding under pdflatex and raise "Unicode character ...
+    # not set up for use with LaTeX", which then cascades into broken
+    # environments. Swap them for plain ASCII equivalents that render
+    # identically in a monospace verbatim block.
+    text = text.replace("\u2502", "|")    # │
+    text = text.replace("\u251c", "|-")   # ├
+    text = text.replace("\u2500", "-")    # ─ (repeats fine char-by-char)
+    text = text.replace("\u2514", "`-")   # └
+    text = text.replace("\u250c", ".-")   # ┌
+    text = text.replace("\u2510", "-.")   # ┐
+    text = text.replace("\u2518", "-'")   # ┘
+    text = text.replace("\u252c", "-+-")  # ┬
+    text = text.replace("\u2534", "-+-")  # ┴
+    text = text.replace("\u253c", "-+-")  # ┼
+
+    # Subscript digits (e.g. "CO₂" for CO2 emissions, common in this report's
+    # Green Banking content) aren't in the T5/vntex font either. Render them
+    # as a real LaTeX subscript instead of dropping/erroring.
+    for i, digit in enumerate("0123456789"):
+        text = text.replace(chr(0x2080 + i), f"$_{digit}$")
+
+    # Down-pointing triangle used as a dropdown/expand marker in some pages.
+    # \blacktriangledown is provided by amssymb, already loaded in main.tex.
+    text = text.replace("\u25bc", r"$\blacktriangledown$")
+
+    return text
+
+
 def sanitize_latex_text(text):
     if text is None:
         return ""
 
     text = str(text)
-    return re.sub(
+    text = re.sub(
         r"[\\&%$#_{}~^]",
         lambda m: LATEX_SPECIALS[m.group(0)],
         text,
     )
+    return replace_unicode_symbols(text)
 
 
 def extract_frontmatter(content):
@@ -284,7 +331,7 @@ def latex_escape_cell(text):
     # Restore \textbf after escaping braces.
     text = text.replace(r"\textbf\{", r"\textbf{").replace(r"\}", "}")
 
-    return text
+    return replace_unicode_symbols(text)
 
 
 def task_cell_to_latex(text):
@@ -653,41 +700,11 @@ def preprocess_markdown(content, meta=None):
     content = re.sub(r"\s*\{\{%\s*/notice\s*%\}\}", r"\n:::\n", content)
 
     content = content.replace("&emsp;", r"\qquad ")
-    content = content.replace("\u2705", r"\checkmark")
-    content = content.replace("\u2610", r"$\square$")
-    content = re.sub(r"⚠\ufe0f?", "!", content)
-    content = content.replace("\u26a0", "!")
-    content = content.replace("\u2192", r"$\rightarrow$")
-
-    # Box-drawing characters (used in ASCII/Unicode directory-tree diagrams
-    # inside fenced code blocks, e.g. "├── models/") aren't available in the
-    # T5/vntex font encoding under pdflatex and raise "Unicode character ...
-    # not set up for use with LaTeX", which then cascades into broken
-    # environments. Swap them for plain ASCII equivalents that render
-    # identically in a monospace verbatim block.
-    content = content.replace("\u2502", "|")    # │
-    content = content.replace("\u251c", "|-")   # ├
-    content = content.replace("\u2500", "-")    # ─ (repeats fine char-by-char)
-    content = content.replace("\u2514", "`-")   # └
-    content = content.replace("\u250c", ".-")   # ┌
-    content = content.replace("\u2510", "-.")   # ┐
-    content = content.replace("\u2518", "-'")   # ┘
-    content = content.replace("\u252c", "-+-")  # ┬
-    content = content.replace("\u2534", "-+-")  # ┴
-    content = content.replace("\u253c", "-+-")  # ┼
-
-    # Subscript digits (e.g. "CO₂" for CO2 emissions, common in this report's
-    # Green Banking content) aren't in the T5/vntex font either. Render them
-    # as a real LaTeX subscript instead of dropping/erroring.
-    for i, digit in enumerate("0123456789"):
-        content = content.replace(chr(0x2080 + i), f"$_{digit}$")
-
-    # Down-pointing triangle used as a dropdown/expand marker in some pages.
-    # \blacktriangledown is provided by amssymb, already loaded in main.tex.
-    content = content.replace("\u25bc", r"$\blacktriangledown$")
+    content = replace_unicode_symbols(content)
 
     return content
 # ---------------------------------------------------------------------------
+
 # Pandoc LaTeX conversion
 # ---------------------------------------------------------------------------
 def neutralize_body_headings(latex):
