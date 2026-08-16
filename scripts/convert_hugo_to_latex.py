@@ -14,7 +14,7 @@ SECTION_TITLES_VI = {
     "2-Proposal": "Đề xuất",
     "3-BlogsPosted": "Các bài blogs đã đăng",
     "4-EventParticipated": "Các sự kiện đã tham gia",
-    "5-Workshop": "Workshop",
+    "5-Workshop": "Dự án cuối kỳ thực tập",
     "6-Self-evaluation": "Tự đánh giá",
     "7-Feedback": "Chia sẻ, đóng góp ý kiến",
 }
@@ -397,6 +397,60 @@ def extract_first_markdown_table(content):
     return content, None, None, ""
 
 
+DAY_COL_NAMES = {"day", "thứ", "thu"}
+TASK_COL_NAMES = {"task", "công việc", "cong viec"}
+
+
+def build_worklog_column_spec(keep_names):
+    """Build a longtable column spec that always matches len(keep_names).
+
+    Previously this was hard-coded to exactly 3 columns
+    (p{0.07}p{0.72}p{0.17}), so any page whose reportTableColumns selected
+    a different number of columns (e.g. 4: Task/Start Date/Completion
+    Date/Notes) produced rows with more '&' separators than the table
+    supported, causing "Extra alignment tab has been changed to \\cr."
+    This builds the spec dynamically: a narrow column for a detected
+    Day column, a wide column for a detected Task column, and an even
+    share of the remaining width for everything else.
+    """
+    n = len(keep_names)
+    day_idx = task_idx = None
+
+    for i, name in enumerate(keep_names):
+        norm = normalize_col_name(name)
+        if day_idx is None and norm in DAY_COL_NAMES:
+            day_idx = i
+        if task_idx is None and norm in TASK_COL_NAMES:
+            task_idx = i
+
+    day_width = 0.07
+    other_width = 0.15
+
+    widths = [None] * n
+    used = 0.0
+
+    for i in range(n):
+        if i == day_idx:
+            widths[i] = day_width
+            used += day_width
+        elif i != task_idx:
+            widths[i] = other_width
+            used += other_width
+
+    if task_idx is not None:
+        widths[task_idx] = max(0.25, 0.98 - used)
+    else:
+        unset = [i for i in range(n) if widths[i] is None]
+        if unset:
+            remain = max(0.2, 0.98 - used)
+            share = remain / len(unset)
+            for i in unset:
+                widths[i] = share
+
+    cols = "".join(f"p{{{w:.3f}\\linewidth}}" for w in widths)
+    return "@{}" + cols + "@{}"
+
+
 def render_worklog_table_latex(header, rows, keep_columns):
     """Render worklog markdown table as custom LaTeX longtable."""
     header_norm = [normalize_col_name(h) for h in header]
@@ -416,8 +470,8 @@ def render_worklog_table_latex(header, rows, keep_columns):
         keep_names = header
 
     # Detect columns
-    day_names = {"day", "thứ", "thu"}
-    task_names = {"task", "công việc", "cong viec"}
+    day_names = DAY_COL_NAMES
+    task_names = TASK_COL_NAMES
     complete_names = {"completion date", "complete date", "ngày hoàn thành", "ngay hoan thanh"}
 
     latex = []
@@ -425,7 +479,7 @@ def render_worklog_table_latex(header, rows, keep_columns):
     latex.append(r"\small")
     latex.append(r"\setlength{\tabcolsep}{5pt}")
     latex.append(r"\renewcommand{\arraystretch}{1.2}")
-    latex.append(r"\begin{longtable}{@{}p{0.07\linewidth}p{0.72\linewidth}p{0.17\linewidth}@{}}")
+    latex.append(r"\begin{longtable}{" + build_worklog_column_spec(keep_names) + "}")
     latex.append(r"\toprule")
 
     # Force nicer names based on selected columns count.
@@ -570,8 +624,26 @@ def preprocess_markdown(content, meta=None):
         if keep_columns:
             content = filter_markdown_tables(content, keep_columns)
 
-    content = re.sub(r"!\[([^\]]*)\]\(/static/images/", r"![\1](", content)
-    content = re.sub(r"!\[([^\]]*)\]\(/images/",      r"![\1](", content)
+    # Convert raw HTML <img> tags to Markdown image syntax *before* Pandoc.
+    # Pandoc's markdown->latex conversion silently drops raw HTML blocks
+    # (they're only preserved for HTML output), so an <img> left as-is
+    # disappears from the PDF with no warning at all.
+    def _html_img_to_markdown(m):
+        tag = m.group(0)
+        src_m = re.search(r'src=["\']([^"\']+)["\']', tag, re.IGNORECASE)
+        alt_m = re.search(r'alt=["\']([^"\']*)["\']', tag, re.IGNORECASE)
+        if not src_m:
+            return ""
+        return f"![{alt_m.group(1) if alt_m else ''}]({src_m.group(1)})"
+
+    content = re.sub(r"<img\b[^>]*>", _html_img_to_markdown, content, flags=re.IGNORECASE)
+
+    # Strip any leading path segments (baseURL, /static/, site-root, etc.)
+    # up to and including "images/", so the remaining path is relative and
+    # resolves via \graphicspath{{../static/images/}} in main.tex/main_en.tex.
+    # Handles all of: /images/..., /static/images/..., and Hugo baseURL-style
+    # absolute paths like /fcaj-intership-report-workshop/images/...
+    content = re.sub(r"!\[([^\]]*)\]\(/(?:[\w.\-]+/)*images/", r"![\1](", content)
 
     content = re.sub(
         r"\{\{%\s*notice\s+(\w+)\s*%\}\}\s*",

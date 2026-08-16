@@ -97,3 +97,9 @@ Terminal sẽ hiển thị đường dẫn (thường là `http://localhost:5173
 
 <img src="/fcaj-intership-report-workshop/images/5-Workshop/5.4-Frontend/4-login.png" width="80%" />
 <img src="/fcaj-intership-report-workshop/images/5-Workshop/5.4-Frontend/5-web.png" width="80%" />
+
+### 5. Chạy ứng dụng đã deploy
+
+Sau khi hoàn thành, bạn có thể chạy ứng dụng đã deploy trên AWS. Để thực hiện điều này, ở bước sam deploy, tìm output key của **FronendCloudFrontUrl** và copy vào trình duyệt:
+
+<img src="/fcaj-intership-report-workshop/images/5-Workshop/5.4-Frontend/6-cloud-url.png" width="80%" />

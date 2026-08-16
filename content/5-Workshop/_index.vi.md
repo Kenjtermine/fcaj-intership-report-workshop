@@ -4,7 +4,7 @@ date: 2024-01-01
 weight: 5
 chapter: false
 pre: " <b> 5. </b> "
-includeInReport: false
+# includeInReport: false
 ---
 
 # Triển khai mô hình Green Banking Serverless (AWS SAM) với NaturEra
@@ -23,4 +23,5 @@ Bạn sẽ được hướng dẫn qua một vòng lặp phát triển hoàn ch�
 2. [Chuẩn bị môi trường & Cài đặt công cụ](5.2-Prerequiste/)
 3. [Khởi tạo Backend với AWS SAM CLI](5.3-Backend-setup/)
 4. [Khởi tạo Frontend với React & Vite](5.4-Frontend-setup/)
-5. [Dọn dẹp tài nguyên (Clean up)](5.5-Cleanup/)
+5. [Kiểm thử và demo các tính năng](5.5-Testing-Demo/)
+6. [Dọn dẹp tài nguyên (Clean up)](5.6-Cleanup/)

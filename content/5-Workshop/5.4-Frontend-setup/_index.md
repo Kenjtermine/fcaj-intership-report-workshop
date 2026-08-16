@@ -98,3 +98,9 @@ The terminal will display a local link (usually `http://localhost:5173`). Press 
 
 <img src="/fcaj-intership-report-workshop/images/5-Workshop/5.5-Frontend/4-login.png" width="80%" />
 <img src="/fcaj-intership-report-workshop/images/5-Workshop/5.5-Frontend/5-web.png" width="80%" />
+
+### 5. Running the Deployed Application
+
+After completing the above steps, you can run the deployed application on AWS. To do this, with the `sam deploy` command, find the output key of **FronendCloudFrontUrl** and copy it to the browser:
+
+<img src="/fcaj-intership-report-workshop/images/5-Workshop/5.5-Frontend/6-cloud-url.png" width="80%" />

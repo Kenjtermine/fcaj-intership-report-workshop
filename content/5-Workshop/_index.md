@@ -4,7 +4,7 @@ date: 2024-01-01
 weight: 5
 chapter: false
 pre: " <b> 5. </b> "
-includeInReport: false
+# includeInReport: false
 ---
 
 # Deploy Serverless Green Banking Backend (AWS SAM) with NaturEra
@@ -21,4 +21,5 @@ You will be guided through a series of incremental development cycles: from crea
 2. [Prerequisites & Setup](5.2-Prerequiste/)
 3. [Create Backend with AWS SAM CLI](5.3-Backend-setup/)
 4. [Create Frontend with React & Vite](5.4-Frontend-setup/)
-5. [Clean up](5.5-Cleanup/)
+5. [Testing & Demo MVP core features](5.5-Testing-Demo/)
+6. [Clean up](5.6-Cleanup/)
