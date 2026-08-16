@@ -14,7 +14,7 @@ SECTION_TITLES_VI = {
     "2-Proposal": "Đề xuất",
     "3-BlogsPosted": "Các bài blogs đã đăng",
     "4-EventParticipated": "Các sự kiện đã tham gia",
-    "5-Workshop": "Dự án cuối kỳ thực tập",
+    "5-Workshop": "Workshop",
     "6-Self-evaluation": "Tự đánh giá",
     "7-Feedback": "Chia sẻ, đóng góp ý kiến",
 }
@@ -675,6 +675,16 @@ def preprocess_markdown(content, meta=None):
     content = content.replace("\u252c", "-+-")  # ┬
     content = content.replace("\u2534", "-+-")  # ┴
     content = content.replace("\u253c", "-+-")  # ┼
+
+    # Subscript digits (e.g. "CO₂" for CO2 emissions, common in this report's
+    # Green Banking content) aren't in the T5/vntex font either. Render them
+    # as a real LaTeX subscript instead of dropping/erroring.
+    for i, digit in enumerate("0123456789"):
+        content = content.replace(chr(0x2080 + i), f"$_{digit}$")
+
+    # Down-pointing triangle used as a dropdown/expand marker in some pages.
+    # \blacktriangledown is provided by amssymb, already loaded in main.tex.
+    content = content.replace("\u25bc", r"$\blacktriangledown$")
 
     return content
 # ---------------------------------------------------------------------------
